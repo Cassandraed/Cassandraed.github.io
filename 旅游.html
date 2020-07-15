@@ -1,0 +1,206 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>旅游</title>
+	<script src="https://cdn.staticfile.org/jquery/1.10.2/jquery.min.js">
+</script>
+<style>
+	body{
+		background-color:#e0d7d2;
+	}
+	.first{
+		list-style-type:none;
+		text-align:center;
+		margin:0;
+		padding:0;
+	}
+	.first>li{
+		display:inline-block;
+		font-size:15px;
+		font-family: "迷你简胖娃";
+		padding:10px;
+		color:#3f3c3c;
+		float:left;
+		position:absolute;
+		left:250px;
+	}
+	a:link{
+		text-decoration: none;
+		color:#3f3c3c;
+	}
+	a:visited{
+		text-decoration: none;
+		color:#3f3c3c;
+	}
+	a:hover{
+		text-decoration: none;
+		color:#d07074;
+	}
+	a:active{
+		text-decoration: none;
+		color:#d07074;
+	}
+	#second{
+		display:none;
+	}
+	.dropdown{
+		position:relative;
+		display:inline-block;
+	}
+	.dropdown:hover{
+		color:#d07074;
+	}
+	.dropdown-content{
+		display:none;
+		position:absolute;
+		min-width:150px;
+		max-width:200px;
+		box-shadow:0px 8px 16px 0px rgba(0,0,0,0.2);
+		z-index:1;
+	}
+	.dropdown-content a{
+		color:#3f3c3c;
+		padding:10px 12px;
+		text-decoration: none;
+		display:block;
+	}
+	.dropdown-content a:hover{
+		background-color:#1d3d56;
+		color:#E4E4E4;
+	}
+	.dropdown:hover .dropdown-content{
+		display:block;
+	}
+	.fourth-content{
+		list-style-type:none;
+		background-color:#715c57;
+		padding:0;
+		margin:0;
+		position:absolute;
+		text-align:center;
+		z-index:1;
+		right:20px;
+		top:180px;
+
+	}
+	.fourth-content a{
+		color:#3f3c3c;
+		padding:5px 20px;
+		text-decoration: none;
+		display:block;
+	}
+	.fourth-content a:hover{
+		background-color:#1d3d56;
+	}
+	.ww{
+		width:300px;
+		height:200px;
+        display:none;
+	}
+	</style>
+</head>
+
+<body>
+	<!--导航条-->
+<ul class="first">
+<li><a href="首页.html">HOME</a></li>
+<li style="left:400px;"><a href="自我介绍.html">ABOUT ME</a></li>
+<li style="left:575px;" class="dropdown">HOBBIES
+<ul>
+<li class="dropdown-content"><a href="旅游.html">旅游</a><a href="综艺.html">综艺</a><a href="影视.html">影视/音乐</a></li>
+</ul>	
+</li>
+<li style="left:737.5px;"><a href="目标.html">GOALS</a></li>
+<li style="left:900px;"><a href="作品.html">WORKS</a></li>
+<!--搜索框-->
+<li style="left:980px"><input type="text" size="17px" style="top:1px;" name="问题" id="second" onmouseover="yes()" placeholder="再按一下按钮我就消失!"></li>
+<li style="left:1120px;top:1px;"><img src="搜索标志.png" alt="sousuo" style="width:32px;" id="third" onmouseover="yes()" onClick="no()"></li>
+<li style="left:100px;top:1px;"><a href="index.html"><img src="导航条.png" style="width:32px;" alt="123"></a></li>
+</ul>
+<!--上一页按钮-->
+<a href="#" onClick="backurl()"><img src="SSAK3.gif" alt="SSAK3" style="position:fixed;height:200px;top:370px;left:0px;"></a>
+<!--下一页按钮-->
+<a href="综艺.html"><img src="William.gif" alt="weilian" style="position:fixed;width:100px;top:420px;right:0px;"></a>
+<ol class="fourth-content">
+<li style="border-bottom:1px solid white;position:relative;" id="yy" onClick="mm()"><span style="color:#E4E4E4;">2020年</span></li>
+<li style="border-bottom:1px solid white;" id="ee" onClick="nn()"><span style="color:#E4E4E4;">2019年</span></li>
+<li style="border-bottom:1px solid white;" id="zz" onClick="vv()"><span style="color:#E4E4E4;">2018年</span></li>
+</ol>
+	<div class="ww" style="position:absolute;left:50px;top:120px;" id="xx">
+	<img src="2.jpg" style="width:200px;" id="ff">
+	</div>
+	<div class="ww" style="position:absolute;left:400px;top:120px;" id="dd">
+	<img src="4.jpg" style="width:200px;" id="tt">
+	</div>
+	<div class="ww" style="position:absolute;left:750px;top:120px;" id="jk">
+	<img src="6.jpg" style="width:200px;" id="uu">
+	</div>
+<script>
+	function yes(){
+		var x=document.getElementById("second");
+		x.style.display="inline";
+	}
+	function no(){
+		var x=document.getElementById("second");
+		x.style.display="none";
+	}
+	$("#yy").click(function(){
+		$("#xx").css("display","block");
+		$("#dd").css("display","none");
+		$("#jk").css("display","none");
+	});
+	$("#ee").click(function(){
+		$("#dd").css("display","block");
+		$("#xx").css("display","none");
+		$("#jk").css("display","none");
+	});
+	$("#zz").click(function(){
+		$("#jk").css("display","block");
+		$("#xx").css("display","none");
+		$("#dd").css("display","none");
+	});
+	function mm(){
+	setInterval(pic,2000);
+	var num=2;
+function pic(){
+	if (num<3){
+		num++;
+	}
+	else{
+		num=2;
+	}
+var dom=document.getElementById("ff");
+dom.src=num+'.jpg';
+}}
+	function nn(){
+		setInterval(yes,2000);
+		var s=4;
+function yes(){
+	if (s<5){
+		s++;
+	}
+	else{
+		s=4;
+	}
+var dow=document.getElementById("tt");
+dow.src=s+'.jpg';
+}
+	}
+	function vv(){
+		setInterval(ss,2000);
+		var gg=6;
+function ss(){
+	if (gg<7){
+		gg++;
+	}
+	else{
+		gg=6;
+	}
+var dow=document.getElementById("uu");
+dow.src=gg+'.jpg';
+}
+	}
+</script>
+</body>
+</html>
