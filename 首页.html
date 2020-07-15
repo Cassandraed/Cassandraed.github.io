@@ -1,0 +1,125 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>首页</title>
+<style>
+	body{
+		background-color:#e0d7d2;
+	}
+	/*导航条及里面列表的样式*/
+	.first{
+		list-style-type:none;
+		text-align:center;
+		margin:0;
+		padding:0;
+	}
+	.first>li{
+		display:inline-block;
+		font-size:15px;
+		font-family: "迷你简胖娃";
+		padding:10px;
+		color:#3f3c3c;
+		float:left;
+		position:absolute;
+		left:250px;
+	}
+	/*链接的样式*/
+	a:link{
+		text-decoration: none;
+		color:#3f3c3c;
+	}
+	a:visited{
+		text-decoration: none;
+		color:#3f3c3c;
+	}
+	a:hover{
+		text-decoration: none;
+		color:#d07074;
+	}
+	a:active{
+		text-decoration: none;
+		color:#d07074;
+	}
+	/*input的隐藏出现*/
+	#second{
+		display:none;
+	}
+	/*下拉菜单*/
+	.dropdown{
+		position:relative;
+		display:inline-block;
+	}
+	.dropdown:hover{
+		color:#d07074;
+	}
+	.dropdown-content{
+		display:none;
+		position:absolute;
+		min-width:150px;
+		max-width:200px;
+		box-shadow:0px 8px 16px 0px rgba(0,0,0,0.2);
+		z-index:1;
+	}
+	.dropdown-content a{
+		color:#3f3c3c;
+		padding:10px 12px;
+		text-decoration: none;
+		display:block;
+	}
+	.dropdown-content a:hover{
+		background-color:#1d3d56;
+		color:#E4E4E4;
+	}
+	.dropdown:hover .dropdown-content{
+		display:block;
+	}
+	.ye{
+		font-family:"黑体";
+		width:50%;
+	}
+</style>
+</head>
+
+<body>
+<!--导航条-->
+<ul class="first">
+<li><a href="首页.html">HOME</a></li>
+<li style="left:400px;"><a href="自我介绍.html">ABOUT ME</a></li>
+<li style="left:575px;" class="dropdown">HOBBIES
+<ul>
+<li class="dropdown-content"><a href="旅游.html">旅游</a><a href="综艺.html">综艺</a><a href="影视.html">影视/音乐</a></li>
+</ul>	
+</li>
+<li style="left:737.5px;"><a href="目标.html">GOALS</a></li>
+<li style="left:900px;"><a href="作品.html">WORKS</a></li>
+<!--搜索框-->
+<li style="left:980px"><input type="text" size="17px" style="top:1px;" name="问题" id="second" onmouseover="yes()" placeholder="再按一下按钮我就消失!"></li>
+<li style="left:1120px;top:1px;"><img src="搜索标志.png" alt="sousuo" style="width:32px;" id="third" onmouseover="yes()" onClick="no()"></li>
+<li style="left:100px;top:1px;"><a href="index.html"><img src="导航条.png" style="width:32px;" alt="123"></a></li>
+</ul>
+<!--上一页按钮-->
+<a href="#" onClick="backurl()"><img src="SSAK3.gif" alt="SSAK3" style="position:fixed;height:200px;top:370px;left:0px;"></a>
+<!--下一页按钮-->
+<a href="自我介绍.html"><img src="William.gif" alt="weilian" style="position:fixed;width:100px;top:420px;right:0px;"></a>
+<!--内容-->
+<img src="励志句子.png" style="position:absolute;height:450px;left:300px;top:30px;" alt="lizhiju">
+<div class="ye" style="position:absolute;left:600px;top:130px;">岁月如斯.<br><br>以影像雕刻时光，离析重构之后，要的仍是永恒或者凝固.<br><br>而文字的记录，是一种胶着，也算是对于记忆的某种信心.<br><br>人生的过往与流徙，最终也会是一出戏.<br><br>导演是时日，演员是你.<br><br>现在我们又多了一种方式记录时光，<br><br>那便是个人网站.<br><br><span style="font-family:'迷你简胖娃';font-size:30px;">欢迎来到我的网站</span></div>
+<script>
+	//搜索框
+	function yes(){
+		var x=document.getElementById("second");
+		x.innerHTML="再按一下按钮我就消失!";
+		x.style.display="inline";
+	}
+	function no(){
+		var x=document.getElementById("second");
+		x.style.display="none";
+	}
+	//上一页
+	function backurl(){
+		window.history.back(-1);
+	}
+</script>
+</body>
+</html>
