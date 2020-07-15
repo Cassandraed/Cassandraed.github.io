@@ -1,0 +1,158 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>自我介绍</title>
+<style>
+body{
+		background-color:#e0d7d2;
+	}
+	/*导航条及里面列表的样式*/
+	.first>li{
+		display:inline-block;
+		font-size:15px;
+		font-family: "迷你简胖娃";
+		padding:10px;
+		color:#3f3c3c;
+		float:left;
+		position:absolute;
+		left:250px;
+	}
+	/*链接的样式*/
+	a:link{
+		text-decoration: none;
+		color:#3f3c3c;
+	}
+	a:visited{
+		text-decoration: none;
+		color:#3f3c3c;
+	}
+	a:hover{
+		text-decoration: none;
+		color:#d07074;
+	}
+	a:active{
+		text-decoration: none;
+		color:#d07074;
+	}
+	/*input的隐藏出现*/
+	#second{
+		display:none;
+	}
+	/*下拉菜单*/
+	.dropdown{
+		position:relative;
+		display:inline-block;
+	}
+	.dropdown:hover{
+		color:#d07074;
+	}
+	.dropdown-content{
+		display:none;
+		position:absolute;
+		min-width:150px;
+		max-width:200px;
+		box-shadow:0px 8px 16px 0px rgba(0,0,0,0.2);
+		z-index:1;
+	}
+	.dropdown-content a{
+		color:#3f3c3c;
+		padding:10px 12px;
+		text-decoration: none;
+		display:block;
+	}
+	.dropdown-content a:hover{
+		background-color:#1d3d56;
+		color:#E4E4E4;
+	}
+	.dropdown:hover .dropdown-content{
+		display:block;
+	}
+	/*自我介绍的背景框*/
+	.ab{
+		position:absolute;
+		height:430px;
+		width:1120px;
+		box-shadow:0px 1px 16px 0px rgba(0,0,0,0.2);
+		background-color:#e0d7d2;
+		z-index:-1;
+	}
+	.first{
+		list-style-type:none;
+		text-align:center;
+		margin:auto;
+		padding:0;
+	}
+</style>
+</head>
+
+<body>
+<!--导航条-->
+<ul class="first">
+<li><a href="首页.html">HOME</a></li>
+<li style="left:400px;"><a href="自我介绍.html">ABOUT ME</a></li>
+<li style="left:575px;" class="dropdown">HOBBIES
+<ul>
+<li class="dropdown-content"><a href="旅游.html">旅游</a><a href="综艺.html">综艺</a><a href="影视.html">影视/音乐</a></li>
+</ul>	
+</li>
+<li style="left:737.5px;"><a href="目标.html">GOALS</a></li>
+<li style="left:900px;"><a href="作品.html">WORKS</a></li>
+<!--搜索框-->
+<li style="left:980px"><input type="text" size="17px" style="top:1px;" name="问题" id="second" onmouseover="yes()" placeholder="再按一下按钮我就消失!"></li>
+<li style="left:1120px;top:1px;"><img src="搜索标志.png" alt="sousuo" style="width:32px;" id="third" onmouseover="yes()" onClick="no()"></li>
+<li style="left:100px;top:1px;"><a href="index.html"><img src="导航条.png" style="width:32px;" alt="123"></a></li>
+</ul>
+<!--上一页按钮-->
+<a href="#" onClick="backurl()"><img src="SSAK3.gif" alt="SSAK3" style="position:fixed;height:200px;top:370px;left:0px;"></a>
+<!--下一页按钮-->
+<a href="旅游.html"><img src="William.gif" alt="weilian" style="position:fixed;width:100px;top:420px;right:0px;"></a>
+<!--内容-->
+<div class="ab" style="margin:50px;">
+<img src="自我介绍.jpg" alt="表情包" style="width:150px;position:absolute;left:70px;top:40px;" title="点击我有惊喜" onclick="ah()" id="qw">
+</div>
+<div>
+<img src="二维码图片.png" alt="二维码" style="position:absolute;height:100px;left:150px;top:300px;">
+<p style="position:absolute;left:130px;top:410px;">扫扫有惊喜╰(*°▽°*)╯</p>
+</div>
+<div style="position:absolute;left:350px;top:100px;border-right-style:dotted;width:360px;height:350px;">
+<p>姓名：hyn</p>
+<p>生日：2000.5.15</p>
+<p>年龄：20岁</p>
+<p>星座：金牛座</p>
+<p>学校：HDU</p>
+<p>座右铭：喜欢的就要去做，不适应的就要去改变。</p>
+<p>尝试过失败，其实并不是特别可拍，也不丢脸。</p>
+<p>一直处在对另一种可能性的幻想中</p>
+<p>后悔自己没有尝试过的东西，才是最可惜的</p>
+	</div>
+<div style="position:absolute;left:750px;top:100px;width:200px;">
+<p>社交网络：</p>
+<p>weibo @hyn123456</p>
+<p>wechat @hyn123456</p>
+<p>twitter @hyn123456</p>
+<p>instergram @hyn123456</p>
+<p style="font-family:'迷你简胖娃';font-size:20px;">你想知道的都在这里</p>
+<p style="font-family:'迷你简胖娃';font-size:20px;">或点击下方表情跳转到works</p>
+	<p>👇</p>
+<p><a href="作品.html">(づ￣ 3￣)づ</a></p>
+</div>
+<script>
+	function yes(){
+		var x=document.getElementById("second");
+		x.style.display="inline";
+	}
+	function no(){
+		var x=document.getElementById("second");
+		x.style.display="none";
+	}
+	function backurl(){
+		window.history.back(-1);
+	}
+	function ah(){
+		var x=document.getElementById("qw");
+		x.src="变化后的表情包.jpg";
+	}
+</script>
+</body>
+</html>
