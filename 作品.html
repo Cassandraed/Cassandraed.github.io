@@ -1,0 +1,182 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>作品</title>
+	<style>
+	body{
+		background-color:#e0d7d2;
+	}
+		/*导航条及里面列表的样式*/
+	.first{
+		list-style-type:none;
+		text-align:center;
+		margin:0;
+		padding:0;
+	}
+	.first>li{
+		display:inline-block;
+		font-size:15px;
+		font-family: "迷你简胖娃";
+		padding:10px;
+		color:#3f3c3c;
+		float:left;
+		position:absolute;
+		left:250px;
+	}
+		/*链接的样式*/
+	a:link{
+		text-decoration: none;
+		color:#3f3c3c;
+	}
+	a:visited{
+		text-decoration: none;
+		color:#3f3c3c;
+	}
+	a:hover{
+		text-decoration: none;
+		color:#d07074;
+	}
+	a:active{
+		text-decoration: none;
+		color:#d07074;
+	}
+		/*input的隐藏出现*/
+	#second{
+		display:none;
+	}
+		/*下拉菜单*/
+	.dropdown{
+		position:relative;
+		display:inline-block;
+	}
+	.dropdown:hover{
+		color:#d07074;
+	}
+	.dropdown-content{
+		display:none;
+		position:absolute;
+		min-width:150px;
+		max-width:200px;
+		box-shadow:0px 8px 16px 0px rgba(0,0,0,0.2);
+		z-index:1;
+	}
+	.dropdown-content a{
+		color:#3f3c3c;
+		padding:10px 12px;
+		text-decoration: none;
+		display:block;
+	}
+	.dropdown-content a:hover{
+		background-color:#1d3d56;
+		color:#E4E4E4;
+	}
+	.dropdown:hover .dropdown-content{
+		display:block;
+	}
+		/*背景框*/
+		.ab{
+		position:absolute;
+		height:430px;
+		width:1120px;
+		box-shadow:0px 1px 16px 0px rgba(0,0,0,0.2);
+		background-color:#e0d7d2;
+		z-index:-1;
+	}
+		/*表格的样式*/
+		th,td{
+			border-bottom:1px solid black;
+			border-right:1px solid black;
+			border-collapse:collapse;
+		}
+		td{
+			text-align:center;
+		}
+		/*内容链接的样式*/
+		.yu:link{
+			color:#2d2d2f;
+		}
+		.yu:visited{
+			color:#444d5e;
+		}
+		.yu:hover{
+			color:#a39191;
+		}
+		.yu:active{
+			color:#a39191;
+		}
+		</style>
+</head>
+
+<body>
+	<!--导航条-->
+<ul class="first">
+<li><a href="首页.html">HOME</a></li>
+<li style="left:400px;"><a href="自我介绍.html">ABOUT ME</a></li>
+<li style="left:575px;" class="dropdown">HOBBIES
+<ul>
+<li class="dropdown-content"><a href="旅游.html">旅游</a><a href="综艺.html">综艺</a><a href="影视.html">影视/音乐</a></li>
+</ul>	
+</li>
+<li style="left:737.5px;"><a href="目标.html">GOALS</a></li>
+<li style="left:900px;"><a href="作品.html">WORKS</a></li>
+<!--搜索框-->
+<li style="left:980px"><input type="text" size="17px" style="top:1px;" name="问题" id="second" onmouseover="yes()" placeholder="再按一下按钮我就消失!"></li>
+<li style="left:1120px;top:1px;"><img src="搜索标志.png" alt="sousuo" style="width:32px;" id="third" onmouseover="yes()" onClick="no()"></li>
+<li style="left:100px;top:1px;"><a href="index.html"><img src="导航条.png" style="width:32px;" alt="123"></a></li>
+</ul>
+<!--上一页按钮-->
+<a href="#" onClick="backurl()"><img src="SSAK3.gif" alt="SSAK3" style="position:fixed;height:200px;top:370px;left:0px;"></a>
+<!--下一页按钮-->
+<a href="首页.html"><img src="William.gif" alt="weilian" style="position:fixed;width:100px;top:420px;right:0px;"></a>
+<!--内容-->
+<div class="ab" style="margin:50px;">
+	<table>
+	<tr>
+	<th style="width:600px;height:50px;">作品名称</th>
+		<th style="width:600px;height:50px;">作品链接</th>	
+	</tr>
+		<tr>
+		<td style="width:600px;height:50px;">数字乐园</td>
+			<td><a href="数字乐园.mp4" target="_blank" class="yu">数字乐园</a></td>
+	</tr>
+		<tr>
+		<td style="width:600px;height:50px;">大屋顶之旅</td>
+		<td><a href="大屋顶之旅vlog.mp4" target="_blank" class="yu">大屋顶之旅</a></td>	
+		</tr>
+		<tr>
+		<td style="width:600px;height:50px;">思</td>
+		<td><a href="思.docx" target="_blank" class="yu">思</a></td>	
+		</tr>
+		<tr>
+		<td style="width:600px;height:50px;">qjnh</td>
+		<td><a href="奇迹男孩最终版.mp4" target="_blank" class="yu">qjnh</a></td>	
+		</tr>
+		<tr>
+		<td style="width:600px;height:50px;">cl</td>
+		<td><a href="cl.mp4" target="_blank" class="yu">cl</a></td>	
+		</tr>
+		<tr>
+		<td style="width:600px;height:50px;">sk</td>
+		<td><a href="sk.mp4" target="_blank" class="yu">sk</a></td>	
+		</tr>
+		<tr>
+		<td style="border:none;left:540px;position:absolute;">……</td>
+		</tr>
+	</table>
+</div>
+<script>
+	function yes(){
+		var x=document.getElementById("second");
+		x.style.display="inline";
+	}
+	function no(){
+		var x=document.getElementById("second");
+		x.style.display="none";
+	}
+	function backurl(){
+		window.history.back(-1);
+	}
+</script>
+</body>
+</html>
