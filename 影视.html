@@ -1,0 +1,143 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>无标题文档</title>
+	<style>
+	body{
+		background-color:#e0d7d2;
+	}
+	.first{
+		list-style-type:none;
+		text-align:center;
+		margin:0;
+		padding:0;
+	}
+	.first>li{
+		display:inline-block;
+		font-size:15px;
+		font-family: "迷你简胖娃";
+		padding:10px;
+		color:#3f3c3c;
+		float:left;
+		position:absolute;
+		left:250px;
+	}
+	a:link{
+		text-decoration: none;
+		color:#3f3c3c;
+	}
+	a:visited{
+		text-decoration: none;
+		color:#3f3c3c;
+	}
+	a:hover{
+		text-decoration: none;
+		color:#d07074;
+	}
+	a:active{
+		text-decoration: none;
+		color:#d07074;
+	}
+	#second{
+		display:none;
+	}
+	.dropdown{
+		position:relative;
+		display:inline-block;
+	}
+	.dropdown:hover{
+		color:#d07074;
+	}
+	.dropdown-content{
+		display:none;
+		position:absolute;
+		min-width:150px;
+		max-width:200px;
+		box-shadow:0px 8px 16px 0px rgba(0,0,0,0.2);
+		z-index:1;
+	}
+	.dropdown-content a{
+		color:#3f3c3c;
+		padding:10px 12px;
+		text-decoration: none;
+		display:block;
+	}
+	.dropdown-content a:hover{
+		background-color:#1d3d56;
+		color:#E4E4E4;
+	}
+	.dropdown:hover .dropdown-content{
+		display:block;
+	}
+		.ab{
+		position:absolute;
+		height:40px;
+		width:120px;
+		box-shadow:0px 1px 16px 0px rgba(0,0,0,0.2);
+		background-color:#e0d7d2;
+		z-index:-1;
+		left:120px;
+		top:80px;
+	}
+	</style>
+</head>
+
+<body>
+<!--导航条-->
+<ul class="first">
+<li><a href="首页.html">HOME</a></li>
+<li style="left:400px;"><a href="自我介绍.html">ABOUT ME</a></li>
+<li style="left:575px;" class="dropdown">HOBBIES
+<ul>
+<li class="dropdown-content"><a href="旅游.html">旅游</a><a href="综艺.html">综艺</a><a href="影视.html">影视/音乐</a></li>
+</ul>	
+</li>
+<li style="left:737.5px;"><a href="目标.html">GOALS</a></li>
+<li style="left:900px;"><a href="作品.html">WORKS</a></li>
+<!--搜索框-->
+<li style="left:980px"><input type="text" size="17px" style="top:1px;" name="问题" id="second" onmouseover="yes()" placeholder="再按一下按钮我就消失!"></li>
+<li style="left:1120px;top:1px;"><img src="搜索标志.png" alt="sousuo" style="width:32px;" id="third" onmouseover="yes()" onClick="no()"></li>
+<li style="left:100px;top:1px;"><a href="index.html"><img src="导航条.png" style="width:32px;" alt="123"></a></li>
+</ul>
+<!--上一页按钮-->
+<a href="#" onClick="backurl()"><img src="SSAK3.gif" alt="SSAK3" style="position:fixed;height:200px;top:370px;left:0px;"></a>
+<!--下一页按钮-->
+<a href="目标.html"><img src="William.gif" alt="weilian" style="position:fixed;width:100px;top:420px;right:0px;"></a>
+	<div class="ab">
+	<p style="position:absolute;left:34px;top:-5px;">时光话</p>
+	</div>
+	<div class="ab" style="position:absolute;left:1000px;top:80px;">
+	<p style="position:absolute;left:38px;top:-6px;">小白船</p>
+	</div>
+	<div class="ab" style="position:absolute;top:300px;">
+	<p style="position:absolute;left:34px;top:-5px;">六七月</p>
+	</div>
+	<audio controls style="position:absolute;top:150px;left:30px;">
+	<source src="时光话.mp4">
+	</audio>
+	<audio controls style="position:absolute;top:370px;left:30px;">
+	<source src="六七月.mp4">
+	</audio>
+	<audio controls style="position:absolute;top:150px;left:900px;">
+	<source src="小白船.mp4">
+	</audio>
+	<p><a href="https://s.weibo.com/weibo/%25E4%25BC%25A0%25E9%2597%25BB%25E4%25B8%25AD%25E7%259A%2584%25E9%2599%2588%25E8%258A%258A%25E8%258A%258A?topnav=1&wvr=6&b=1" style="position:absolute;left:520px;top:90px;text-decoration:underline" target="ifamea">传闻中的陈芊芊</a></p>
+	<p><a href="https://s.weibo.com/weibo?q=%E6%88%91%E6%89%8D%E4%B8%8D%E8%A6%81%E5%92%8C%E4%BD%A0%E5%81%9A%E6%9C%8B%E5%8F%8B%E5%91%A2&wvr=6&b=1&Refer=SWeibo_box" style="position:absolute;left:520px;top:140px;text-decoration:underline" target="ifamea">我才不要和你做朋友呢</a></p>
+	<p><a href="https://s.weibo.com/weibo?q=%E9%9A%90%E7%A7%98%E7%9A%84%E8%A7%92%E8%90%BD&wvr=6&b=1&Refer=SWeibo_box" style="position:absolute;left:520px;top:190px;text-decoration:underline" target="ifamea">隐秘的角落</a></p>
+	<iframe src="index.html" style="width:600px;height:300px;position:absolute;top:230px;left:350px;" name="ifamea"></iframe>
+	<script>
+	function yes(){
+		var x=document.getElementById("second");
+		x.style.display="inline";
+	}
+	function no(){
+		var x=document.getElementById("second");
+		x.style.display="none";
+	}
+	function backurl(){
+		window.history.back(-1);
+	}
+		</script>
+</body>
+</html>
