@@ -1,0 +1,185 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>综艺</title>
+	<style>
+	body{
+		background-color:#e0d7d2;
+	}
+	.first{
+		list-style-type:none;
+		text-align:center;
+		margin:0;
+		padding:0;
+	}
+	.first>li{
+		display:inline-block;
+		font-size:15px;
+		font-family: "迷你简胖娃";
+		padding:10px;
+		color:#3f3c3c;
+		float:left;
+		position:absolute;
+		left:250px;
+	}
+	a:link{
+		text-decoration: none;
+		color:#3f3c3c;
+	}
+	a:visited{
+		text-decoration: none;
+		color:#3f3c3c;
+	}
+	a:hover{
+		text-decoration: none;
+		color:#d07074;
+	}
+	a:active{
+		text-decoration: none;
+		color:#d07074;
+	}
+	#second{
+		display:none;
+	}
+	.dropdown{
+		position:relative;
+		display:inline-block;
+	}
+	.dropdown:hover{
+		color:#d07074;
+	}
+	.dropdown-content{
+		display:none;
+		position:absolute;
+		min-width:150px;
+		max-width:200px;
+		box-shadow:0px 8px 16px 0px rgba(0,0,0,0.2);
+		z-index:1;
+	}
+	.dropdown-content a{
+		color:#3f3c3c;
+		padding:10px 12px;
+		text-decoration: none;
+		display:block;
+	}
+	.dropdown-content a:hover{
+		background-color:#1d3d56;
+		color:#E4E4E4;
+	}
+	.dropdown:hover .dropdown-content{
+		display:block;
+	}
+		.ab{
+		position:absolute;
+		height:40px;
+		width:120px;
+		box-shadow:0px 1px 16px 0px rgba(0,0,0,0.2);
+		background-color:#e0d7d2;
+		z-index:-1;
+		left:50px;
+		top:80px;
+	}
+		.six{
+			height:380px;
+			width:200px;
+			position:absolute;
+			right:-22px;
+			top:150px;
+		}
+	</style>
+</head>
+
+<body>
+	<!--导航条-->
+<ul class="first">
+<li><a href="首页.html">HOME</a></li>
+<li style="left:400px;"><a href="自我介绍.html">ABOUT ME</a></li>
+<li style="left:575px;" class="dropdown">HOBBIES
+<ul>
+<li class="dropdown-content"><a href="旅游.html">旅游</a><a href="综艺.html">综艺</a><a href="影视.html">影视/音乐</a></li>
+</ul>	
+</li>
+<li style="left:737.5px;"><a href="目标.html">GOALS</a></li>
+<li style="left:900px;"><a href="作品.html">WORKS</a></li>
+<!--搜索框-->
+<li style="left:980px"><input type="text" size="17px" style="top:1px;" name="问题" id="second" onmouseover="yes()" placeholder="再按一下按钮我就消失!"></li>
+<li style="left:1120px;top:1px;"><img src="搜索标志.png" alt="sousuo" style="width:32px;" id="third" onmouseover="yes()" onClick="no()"></li>
+<li style="left:100px;top:1px;"><a href="index.html"><img src="导航条.png" style="width:32px;" alt="123"></a></li>
+</ul>
+<!--上一页按钮-->
+<a href="#" onClick="backurl()"><img src="SSAK3.gif" alt="SSAK3" style="position:fixed;height:200px;top:370px;left:0px;"></a>
+<!--下一页按钮-->
+<a href="影视.html"><img src="William.gif" alt="weilian" style="position:fixed;width:100px;top:420px;right:0px;"></a>
+<div class="ab">
+<p style="position:absolute;left:25px;bottom:-6px;" onClick="wa()">新西游记</p>
+</div>
+<img src="新西游记1.jpg" style="width:200px;position:absolute;top:150px;left:20px;z-index:-1;" alt="hhh" onclick="wa()">
+<div class="ab" style="left:350px;">
+<p style="position:absolute;left:20px;bottom:-6px;" onClick="oo()">闲着干嘛呢</p>
+</div>
+<img src="闲着干嘛呢.jpg" style="width:220px;position:absolute;top:150px;left:300px;z-index:-1;height:350px;" onClick="oo()">
+<div class="ab" style="left:650px;">
+<p style="position:absolute;left:20px;bottom:-6px;" onClick="aa()">超人回来了</p>
+</div>
+<img src="超人回来了.jpg" style="width:220px;position:absolute;top:150px;left:600px;z-index:-1;height:350px;" onClick="aa()">
+<div class="six">
+<video controls style="width:400px;display:none;position:absolute;right:20px;" id="qq">
+<source src="新西游记1.mp4">	
+</video>
+</div>
+<div class="six">
+<video controls style="width:400px;display:none;position:absolute;right:20px;" id="bb">
+<source src="闲着干嘛呢.mp4">	
+</video>
+	</div>
+	<div class="six">
+<video controls style="width:400px;display:none;position:absolute;right:20px;" id="cc">
+<source src="超人回来了1.mp4">	
+</video>
+</div>
+<script>
+	function yes(){
+		var x=document.getElementById("second");
+		x.style.display="inline";
+	}
+	function no(){
+		var x=document.getElementById("second");
+		x.style.display="none";
+	}
+	function wa(){
+		var z=document.getElementById("qq");
+		z.style.display="block";
+		var q=document.getElementById("bb");
+		q.style.display="none";
+		var c=document.getElementById("cc");
+		c.style.display="none";
+		z.addEventListener('ended',function(){
+			z.style.display="none";
+		})
+	}
+	function oo(){
+		var z=document.getElementById("bb");
+		z.style.display="block";
+		var q=document.getElementById("qq");
+		q.style.display="none";
+		var c=document.getElementById("cc");
+		c.style.display="none";
+		z.addEventListener('ended',function(){
+			z.style.display="none";
+		})
+	}
+	function aa(){
+		var z=document.getElementById("cc");
+		z.style.display="block";
+		var q=document.getElementById("bb");
+		q.style.display="none";
+		var c=document.getElementById("qq");
+		c.style.display="none";
+		z.addEventListener('ended',function(){
+			z.style.display="none";
+		})
+	}
+</script>
+</body>
+</html>
